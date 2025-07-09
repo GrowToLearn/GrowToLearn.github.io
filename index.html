@@ -3,16 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AI Chatbot Framework (Static)</title>
+  <title>AI Chatbot</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="chat-container">
+  <div class="background"></div>
+  <div class="chat-card">
+    <header>
+      <img src="https://img.icons8.com/color/48/000000/robot.png" alt="Bot" class="bot-avatar" />
+      <h1>AI Chatbot</h1>
+    </header>
     <div id="chatlog" class="chat-log"></div>
     <form id="chat-form" autocomplete="off">
-      <input type="text" id="user-input" placeholder="Type your message..." required />
+      <input type="text" id="user-input" placeholder="Ask me anything..." required autocomplete="off" />
       <button type="submit">Send</button>
     </form>
+    <div class="footer">
+      <small>Powered by OpenAI</small>
+    </div>
   </div>
   <script src="chatbot.js"></script>
 </body>
