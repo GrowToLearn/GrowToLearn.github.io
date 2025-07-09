@@ -1,60 +1,88 @@
+/* Nature-inspired animated background with a soft gradient and floating leaves effect */
 body {
+  min-height: 100vh;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-  color: white;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #234d20;
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
+  justify-content: center;
+  background: linear-gradient(135deg, #a8e063 0%, #56ab2f 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Floating leaves animation */
+.leaf {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  opacity: 0.7;
+  animation: floatLeaf 12s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes floatLeaf {
+  0% {
+    transform: translateY(100vh) rotate(0deg) scale(0.8);
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-20vh) rotate(360deg) scale(1.2);
+    opacity: 0;
+  }
 }
 
 .container {
+  background: rgba(255, 255, 255, 0.82);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(56, 142, 60, 0.25);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
   text-align: center;
-  background: rgba(0, 0, 0, 0.3);
-  padding: 3rem;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  width: 320px;
+  z-index: 1;
 }
 
-.title {
-  font-size: 2rem;
+h1 {
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  text-transform: uppercase;
+  color: #388e3c;
   letter-spacing: 2px;
 }
 
-.subtitle {
+p {
+  font-size: 1.15rem;
+  color: #234d20;
+  margin-bottom: 2rem;
+}
+
+button {
+  margin-top: 1.5rem;
+  padding: 0.9rem 2.2rem;
   font-size: 1.2rem;
-  margin-bottom: 2rem;
-  font-weight: 300;
-}
-
-.btn {
-  background-color: #ff4081;
+  background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
   border: none;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  color: white;
-  border-radius: 30px;
+  border-radius: 24px;
+  color: #fff;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 15px #ff4081aa;
+  box-shadow: 0 4px 24px rgba(24,90,157,0.18);
+  transition: background 0.2s, transform 0.2s;
 }
 
-.btn:hover {
-  background-color: #e73370;
-  box-shadow: 0 6px 20px #e73370cc;
+button:hover {
+  background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%);
+  transform: scale(1.05);
 }
 
-.box {
-  font-size: 1.5rem;
-  padding: 1rem;
-  border: 2px solid white;
-  border-radius: 12px;
-  display: inline-block;
-  transition: transform 0.3s ease;
-  user-select: none;
+#quoteBox {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  min-height: 60px;
+  color: #388e3c;
+  font-style: italic;
+  transition: color 0.2s;
 }
