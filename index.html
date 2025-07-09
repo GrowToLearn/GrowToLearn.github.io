@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>GrowToLearn</title>
+  <title>AI Chatbot Framework (Static)</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>GrowToLearn 🌱</h1>
-    <p>Welcome to your interactive learning journey!</p>
-    <button id="inspireBtn">Inspire Me!</button>
-    <div id="quoteBox"></div>
+  <div class="chat-container">
+    <div id="chatlog" class="chat-log"></div>
+    <form id="chat-form" autocomplete="off">
+      <input type="text" id="user-input" placeholder="Type your message..." required />
+      <button type="submit">Send</button>
+    </form>
   </div>
-  <script src="script.js"></script>
+  <script src="chatbot.js"></script>
 </body>
 </html>
